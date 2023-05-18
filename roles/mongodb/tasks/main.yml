@@ -20,6 +20,6 @@
       - (ansible_distribution == 'Ubuntu') and ("'mongod' not in mongo_output.stdout")
 
 - name: Install MongoDB for Rocky
-  include_tasks: mysql_install_rhel/main.yml
+  include_tasks: install_mongo_rocky/main.yml
   when: 
       - (ansible_distribution == 'Rocky') and ("'mongod' not in mongo_output.stdout")
